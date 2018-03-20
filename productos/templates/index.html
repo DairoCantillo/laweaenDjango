@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GG IZI</title>
+</head>
+
+<body>
+
+</body>
+<ul>
+    {% for pr in producto %}
+    <li>
+        <h2>{{ pr.nombre }}</h2>
+        {{ pr.descripcion }} {{ pr.categoria }} {{ pr.precio }} {{ pr.formadepago }}
+        <br>
+    </li>
+    {%endfor%}
+</ul>
+
+</html>

@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+   #Configuracion de archivos estaticos en Django
+
 INSTALLED_APPS = [
     'productos.apps.ProductosConfig',
     'django.contrib.admin',
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
 ]
 
 MIDDLEWARE_CLASSES = [

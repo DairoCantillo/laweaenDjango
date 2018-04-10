@@ -30,7 +30,13 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    
+]  
+
    #Configuracion de archivos estaticos en Django
+
 
 INSTALLED_APPS = [
     'productos.apps.ProductosConfig',

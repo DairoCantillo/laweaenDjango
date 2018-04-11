@@ -1,0 +1,11 @@
+.card {
+    height: 300px !important;
+}
+
+.containerProducts .card-image {
+    height: 60% !important;
+}
+
+.containerProducts .card-content {
+    height: 40% !important;
+}

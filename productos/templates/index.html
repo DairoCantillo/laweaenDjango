@@ -20,8 +20,8 @@
     <!--NAVAR-->
 
     <div class="navbar-fixed ">
-        <nav class="nav-extended">
-            <div class="nav-wrapper teal lighten-1 ">
+        <nav class="nav-extended teal lighten-1 ">
+            <div class="nav-wrapper ">
                 <a href="#" class="brand-logo"><img id="logo" class="responsive-img" src="{% static 'images/logos/logo1.png' %}" /></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -64,45 +64,58 @@
     </div>
     <div class="section white">
         <div class="row container">
-            <h2 class="header">Parallax</h2>
-            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+            <h2 class="header">Productos</h2>
+            {% for p in producto %}
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ p.imagen.url }}">
+                        <span class="card-title">{{ p.nombre }}</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>{{p.descripcion}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
         </div>
     </div>
     <div class="parallax-container">
         <div class="parallax"><img src="{% static 'images/parallax2.jpg' %}"></div>
     </div>
     <div class="section white">
-        <div class="row container">
-            <h2 class="header">Parallax</h2>
-            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+
+    </div>
+    <!--footer-->
+    <footer class="page-footer teal lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Deca Inc</h5>
+                    <p class="grey-text text-lighten-4">Encuentra todos los productos de la mejores marcas en un solo lugar.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Ayuda</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" target="_blank" href="https://youtube.com/aunnosuboelvideoxd">Como Comprar</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <!--footer-->
-        <footer class="page-footer teal lighten-1">
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        </ul>
-                    </div>
-                </div>
+                © 2018 Copyright Text
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2018 Copyright Text
-                </div>
-            </div>
-        </footer>
+        </div>
+    </footer>
 
 
 
-        <!--JavaScript at end of body for optimized loading-->
-        <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
 
 </body>
 
